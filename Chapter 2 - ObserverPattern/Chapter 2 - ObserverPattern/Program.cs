@@ -18,7 +18,7 @@ namespace Chapter_2___ObserverPattern
             WeatherStation weatherStation = new WeatherStation();
 
             //Observers
-            Console.WriteLine("Creating Observers - CurrentConditionsDisplay & AirplanSafetyMonitor: \n");
+            Console.WriteLine("Creating Observers - CurrentConditionsDisplay, AirplanSafetyMonitor & Trip Advisor: \n");
             CurrentConditionsDisplay currentConditions = new CurrentConditionsDisplay();
             AirplaneSafetyMonitor airplaneSafetyMonitor = new AirplaneSafetyMonitor();
             TripAdvisor tripAdvisor = new TripAdvisor();
