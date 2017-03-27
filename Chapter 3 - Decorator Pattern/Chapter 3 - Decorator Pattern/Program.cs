@@ -18,7 +18,6 @@ namespace Chapter_3___Decorator_Pattern
             Beverage secondBeverage = new Espresso();
             Beverage thirdBeverage = new HouseBlend();
 
-
             Console.WriteLine("Decorating Beverages to Add Condiments:");
             secondBeverage = new Whip(secondBeverage);
             thirdBeverage = new Milk(thirdBeverage);

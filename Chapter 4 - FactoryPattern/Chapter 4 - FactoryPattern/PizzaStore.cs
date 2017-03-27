@@ -14,6 +14,9 @@
             Pizza pizza;
             pizza = Factory.CreatePizza(type);
             pizza.Prepare();
+            pizza.Bake();
+            pizza.Cut();
+            pizza.Box();
             return pizza;
         }
     }

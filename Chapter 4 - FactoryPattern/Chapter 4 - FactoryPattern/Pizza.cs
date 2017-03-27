@@ -27,7 +27,7 @@ namespace Chapter_4___FactoryPattern
 
         public void Box()
         {
-            Console.WriteLine("Placing Pizza in Official Pizza Store Box.");
+            Console.WriteLine("Placing Pizza in Official Pizza Store Box. \n");
         }
     }
 
