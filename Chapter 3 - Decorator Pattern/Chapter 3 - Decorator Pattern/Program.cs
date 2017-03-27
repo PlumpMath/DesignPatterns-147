@@ -13,18 +13,18 @@ namespace Chapter_3___Decorator_Pattern
         {
             Console.WriteLine("Chapter 3 - Decorator Pattern:");
 
-            //Create Beverage Objects
+            Console.WriteLine("Creating Our 3 Beverages:");
             Beverage firstBeverage = new DarkRoast();
             Beverage secondBeverage = new Espresso();
             Beverage thirdBeverage = new HouseBlend();
 
 
-            //Decorate or Wrap Objects with New Dynamic Object
+            Console.WriteLine("Decorating Beverages to Add Condiments:");
             secondBeverage = new Whip(secondBeverage);
             thirdBeverage = new Milk(thirdBeverage);
-            thirdBeverage = new Mocha(thirdBeverage); 
+            thirdBeverage = new Mocha(thirdBeverage);
 
-            //Send Beverage to Print Method
+            Console.WriteLine("Sending Beverages to Print Method:");
             PrintBeverage(firstBeverage); //Undecorated Object
             PrintBeverage(secondBeverage);//Single Decorated Object
             PrintBeverage(thirdBeverage);//Double Decorated object
