@@ -17,7 +17,7 @@ namespace Chapter_4___Abstract_Factory_Pattern
         Clam CreateClam();
     }
 
-    //Implementing Region Specific Receipes.
+    //New York Factory & Recipe
     public class NewYorkIngredientFactory : PizzaIngredientFactory
     {
         public Dough CreateDough()
@@ -50,6 +50,7 @@ namespace Chapter_4___Abstract_Factory_Pattern
         }
     }
 
+    //California Factory & Recipe
     public class CaliforniaIngredientFactory : PizzaIngredientFactory
     {
         public Dough CreateDough()
@@ -82,29 +83,30 @@ namespace Chapter_4___Abstract_Factory_Pattern
         }
     }
 
+    //Chicago Factory & Recipe
     public class ChicagoPizzaFactory : PizzaIngredientFactory
     {
         public Dough CreateDough()
         {
-            return new ThinCrustDough();
+            return new TomatoFilledDough();
         }
         public Sauce CreateSauce()
         {
-            return new MarinaraSauce();
+            return new WhiteTomatoSauce();
         }
         public Cheese CreateCheese()
         {
-            return new CheddarCheese();
+            return new ParmesanCheese();
         }
 
         public Pepperoni CreatePepperoni()
         {
-            return new SlicedPepperoni();
+            return new CubedPepperoni();
         }
 
         public Veggies[] CreateVeggies()
         {
-            Veggies[] vegtables = { new Pineapple(), new Sweetcorn(), new Onion()};
+            Veggies[] vegtables = { new Spinach(), new GreenOlives(), new Onion()};
             return vegtables;
         }
 

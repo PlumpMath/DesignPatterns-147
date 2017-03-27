@@ -26,6 +26,13 @@ namespace Chapter_4___Abstract_Factory_Pattern
             return "Thin Crust Dough";
         }
     }
+    public class TomatoFilledDough : Dough
+    {
+        public string ToString()
+        {
+            return "Tomato Filled Dough";
+        }
+    }
 
     //Sauce
     public interface Sauce
@@ -45,6 +52,14 @@ namespace Chapter_4___Abstract_Factory_Pattern
         public string ToString()
         {
             return "Plum Tomato Sauce";
+        }
+    }
+
+    public class WhiteTomatoSauce : Sauce
+    {
+        public string ToString()
+        {
+            return "White Tomato Sauce";
         }
     }
 
@@ -68,6 +83,14 @@ namespace Chapter_4___Abstract_Factory_Pattern
         }
     }
 
+    public class ParmesanCheese : Cheese
+    {
+        public string ToString()
+        {
+            return "Parmesan Cheese";
+        }
+    }
+
     //Pepperoni
     public interface Pepperoni
     {
@@ -85,6 +108,14 @@ namespace Chapter_4___Abstract_Factory_Pattern
         public string ToString()
         {
             return "Ground Pepperoni";
+        }
+    }
+
+    public class CubedPepperoni : Pepperoni
+    {
+        public string ToString()
+        {
+            return "Cubed Pepperoni";
         }
     }
 
@@ -114,6 +145,20 @@ namespace Chapter_4___Abstract_Factory_Pattern
             return "Pineapple";
         }
     }
+    public class Spinach : Veggies
+    {
+        public string ToString()
+        {
+            return "Spinach";
+        }
+    }
+    public class GreenOlives : Veggies
+    {
+        public string ToString()
+        {
+            return "Green Olives";
+        }
+    }
 
     //Clams
     public interface Clam
@@ -134,6 +179,14 @@ namespace Chapter_4___Abstract_Factory_Pattern
         public string ToString()
         {
             return "Frozen Clam";
+        }
+    }
+
+    public class FakeClams : Clam
+    {
+        public string ToString()
+        {
+            return "Fake Clam";
         }
     }
 }

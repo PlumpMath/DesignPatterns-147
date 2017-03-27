@@ -88,11 +88,12 @@ namespace Chapter_4___Abstract_Factory_Pattern
             Veggies = pizzaIngredientFactory.CreateVeggies();
             Console.WriteLine("Ingredients: Dough: {0} - Sauce: {1} - Cheese: {2}", Dough.ToString(), Sauce.ToString(),
                 Cheese.ToString());
-            Console.WriteLine("Additional Vegtables: ");
+            Console.Write("Additional Vegtables: ");
             foreach (Veggies vegtable in Veggies)
             {
-                Console.WriteLine(vegtable.ToString());
+                Console.Write(vegtable.ToString() + ", ");
             }
+            Console.Write("\n");
         }
 
         public class ClamPizza : Pizza
