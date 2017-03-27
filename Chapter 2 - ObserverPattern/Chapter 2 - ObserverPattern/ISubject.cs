@@ -17,6 +17,7 @@ namespace Chapter_2___ObserverPattern
     {
         protected IList<IObserver> Observers = new List<IObserver>();
         protected double Temperature, Humidity, Pressure;
+        string Location;
 
         public void RegisterObserver(IObserver o)
         {
@@ -32,12 +33,13 @@ namespace Chapter_2___ObserverPattern
         {
             foreach (IObserver observer in Observers)
             {
-                observer.Update(Temperature, Humidity, Pressure);
+                observer.Update(Location, Temperature, Humidity, Pressure);
             }
         }
 
-        public void SetMeasurements(double t, double h, double p)
+        public void SetMeasurements(string Location, double t, double h, double p)
         {
+            this.Location = Location;
             this.Temperature = t;
             this.Humidity = h;
             this.Pressure = p;
