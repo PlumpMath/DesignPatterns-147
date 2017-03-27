@@ -19,7 +19,8 @@ namespace Chapter_1___StrategyPattern
             mallardDuck.PerformQuack();
             mallardDuck.Swim();
 
-            //Changing Behavior @ Runtime
+            //Changing Mallard Duck @ Runtime.
+            Console.WriteLine("Changing Mallard Ducks Behvaior @ Runtime!");
             mallardDuck.SetFlyBehavior(new RocketPowered());
             mallardDuck.SetQuackBehavior(new BurpQuack());
             mallardDuck.Display();
@@ -29,6 +30,7 @@ namespace Chapter_1___StrategyPattern
 
 
             //Decoy Duck
+            Console.WriteLine("Decoy Duck with Decoy Duck Behavior!");
             DecoyDuck decoyDuck = new DecoyDuck();
             decoyDuck.Display();
             decoyDuck.PerformFly();
@@ -36,6 +38,7 @@ namespace Chapter_1___StrategyPattern
             decoyDuck.Swim();
 
             //Astronaut Duck
+            Console.WriteLine("Astronaut Duck with Upgraded Behavior!");
             AstronautDuck astronautDuck = new AstronautDuck();
             astronautDuck.Display();
             astronautDuck.PerformFly();

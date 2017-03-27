@@ -26,6 +26,8 @@ namespace Chapter_1___StrategyPattern
             Console.WriteLine("No Flying Action Envoked.");
         }
     }
+
+    //New Functionality Management was looking for!
     public class RocketPowered : IFlyBehavior
     {
         public void Fly()

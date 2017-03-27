@@ -8,10 +8,11 @@ namespace Chapter_1___StrategyPattern
 {
     public abstract class Duck
     {
+        //Behaviors
         protected IFlyBehavior FlyBehavior;
         protected IQuackBehavior QuackBehavior;
 
-        //Set Behavior Methods
+        //Set Behavior Methods - Allows behavior to be Changed at Runtime +5 Flexibility.
         public void SetFlyBehavior(IFlyBehavior fb)
         {
             FlyBehavior = fb;
@@ -43,10 +44,11 @@ namespace Chapter_1___StrategyPattern
     {
         public MallardDuck()
         {
+            //Setting Behavior @ instantiation
             FlyBehavior = new FlyWithWings();
             QuackBehavior = new LoudQuack();
         }
-
+        //Only have to Implement the Display Method.
         public override void Display()
         {
             Console.WriteLine("I am Mallard Duck.");
