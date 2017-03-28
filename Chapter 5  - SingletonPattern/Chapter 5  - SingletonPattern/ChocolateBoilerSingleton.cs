@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Chapter_5____SingletonPattern
 {
+    //Thread Safe Singleton
     public sealed class ChocolateBoilerSingleton
     {
         protected bool empty, boiled;
 
-        //Informing Compiler these objects are volatile.(Don't Cache the value)
+        //Informing CLR these objects are volatile.(Don't Cache the value)
         private static volatile ChocolateBoilerSingleton uniqueInstance;
         private static object syncRoot = new Object();
 
@@ -24,12 +25,16 @@ namespace Chapter_5____SingletonPattern
         {
             get
             {
+                //Check UnqiueInstance
                 if (uniqueInstance == null)
                 {
+                    //Lock the Check Again, to avoid Race Conditions.
                     lock (syncRoot)
                     {
+                        //Final Check
                         if (uniqueInstance == null)
                         {
+                            //Assign Instance of Class
                             uniqueInstance = new ChocolateBoilerSingleton();
                         }
                     }

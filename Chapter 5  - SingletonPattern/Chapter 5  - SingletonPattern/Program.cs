@@ -12,12 +12,16 @@ namespace Chapter_5____SingletonPattern
         {
             Console.WriteLine("Chapter 5 - Singleton Pattern:");
 
+            //Assignment Not Allowed:
+            //ChocolateBoilerSingleton boiler = new ChocolateBoilerSingleton();
+
+
             //Interacting with our Singleton
             ChocolateBoilerSingleton.Instance.Fill();
             ChocolateBoilerSingleton.Instance.Boil();
             ChocolateBoilerSingleton.Instance.Drain();
 
-
+            
             Console.ReadKey();
         }
     }
