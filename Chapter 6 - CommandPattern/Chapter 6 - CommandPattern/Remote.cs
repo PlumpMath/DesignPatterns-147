@@ -19,7 +19,7 @@ namespace Chapter_6___CommandPattern
             onCommands = new ICommand[7];
             offCommands = new ICommand[7];
 
-            //Filling Array with Null Commands
+            //Filling Array with Null Commands(Incase they're pressed before assignment)
             for (int i = 0; i < 7; i++)
             {
                 onCommands[i] = new NoCommand();
