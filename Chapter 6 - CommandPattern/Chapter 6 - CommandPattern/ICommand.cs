@@ -6,6 +6,7 @@
         void Undo();
     }
 
+    //Null Command Pattern
     public class NoCommand : ICommand
     {
         public void Execute()
@@ -19,6 +20,7 @@
         }
     }
 
+    //Normal Commands
     public class LightOnCommand : ICommand
     {
         private Light Light;
@@ -173,6 +175,40 @@
         public void Undo()
         {
             Stereo.TurnOn();
+        }
+    }
+
+    public class HottubOnCommand : ICommand
+    {
+        HotTub Tub;
+        public HottubOnCommand(HotTub tub)
+        {
+            Tub = tub;
+        }
+        public  void Execute()
+        {
+            Tub.Prepare();
+        }
+        public void Undo()
+        {
+            Tub.TurnOff();
+        }
+    }
+
+    public class HottubOffCommand : ICommand
+    {
+        HotTub Tub;
+        public HottubOffCommand(HotTub tub)
+        {
+            Tub = tub;
+        }
+        public void Execute()
+        {
+            Tub.TurnOff();
+        }
+        public void Undo()
+        {
+            Tub.TurnOn();
         }
     }
 }

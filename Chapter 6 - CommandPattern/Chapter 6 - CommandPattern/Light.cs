@@ -63,4 +63,24 @@ namespace Chapter_6___CommandPattern
             Console.WriteLine("Stereo is Turned Off.");
         }
     }
+
+    public class HotTub
+    {
+        public int Temperature {get; set;}
+
+        public void Prepare()
+        {
+            Console.WriteLine("Preparing HotTub & Filtering Water" );
+            System.Threading.Thread.Sleep(5000); //Simulate Preperation
+            TurnOn();
+        }
+        public void TurnOn()
+        {
+            Console.WriteLine("Hot Tub  @ {0} Degrees, turning on Air Nozzles", Temperature);
+        }
+        public void TurnOff()
+        {
+            Console.WriteLine("Turning Hot Tub oOff");
+        }
+    }
 }
