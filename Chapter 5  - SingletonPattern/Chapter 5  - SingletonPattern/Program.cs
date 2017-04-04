@@ -12,9 +12,16 @@ namespace Chapter_5____SingletonPattern
         {
             Console.WriteLine("Chapter 5 - Singleton Pattern:");
 
+            //Simple Singleton
+            NormalSingleton.Instance.PerformAction();
+
+            //Static Initialization
+            SingletonTwo.Instance.PerformAction();
+
+            //Thread Safe
+            Console.WriteLine("Thread Safe Singleton - Creating Thread Safe Singleton.");
             //Assignment Not Allowed:
             //ChocolateBoilerSingleton boiler = new ChocolateBoilerSingleton();
-
 
             //Interacting with our Singleton
             ChocolateBoilerSingleton.Instance.Fill();

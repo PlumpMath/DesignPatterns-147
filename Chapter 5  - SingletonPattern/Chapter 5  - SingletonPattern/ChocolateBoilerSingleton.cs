@@ -12,7 +12,7 @@ namespace Chapter_5____SingletonPattern
         protected bool empty, boiled;
 
         //Informing CLR these objects are volatile.(Don't Cache the value)
-        private static volatile ChocolateBoilerSingleton uniqueInstance;
+        private static volatile ChocolateBoilerSingleton _uniqueInstance;
         private static object syncRoot = new Object();
 
         private ChocolateBoilerSingleton()
@@ -26,20 +26,20 @@ namespace Chapter_5____SingletonPattern
             get
             {
                 //Check UnqiueInstance
-                if (uniqueInstance == null)
+                if (_uniqueInstance == null)
                 {
                     //Lock the Check Again, to avoid Race Conditions.
                     lock (syncRoot)
                     {
                         //Final Check
-                        if (uniqueInstance == null)
+                        if (_uniqueInstance == null)
                         {
                             //Assign Instance of Class
-                            uniqueInstance = new ChocolateBoilerSingleton();
+                            _uniqueInstance = new ChocolateBoilerSingleton();
                         }
                     }
                 }
-                return uniqueInstance;
+                return _uniqueInstance;
             }
         }
         //Normal Boiler Methods
