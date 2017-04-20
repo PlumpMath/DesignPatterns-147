@@ -13,26 +13,26 @@ namespace Chapter_7___Adapter_Pattern
             Console.WriteLine("Chapter 7 - Adapter Pattern:");
 
             //Normal Turkey
+            Console.WriteLine("Creating Generic Turkey:");
             FarmTurkey farmTurkey = new FarmTurkey();
             farmTurkey.Display();
             farmTurkey.Gobble();
             farmTurkey.Glide();
 
-            Console.WriteLine("");
+
             //Normal Duck
+            Console.WriteLine("\nCreating Generic Duck:");
             MallardDuck mallardDuck = new MallardDuck();
             mallardDuck.Display();
             mallardDuck.Quack();
             mallardDuck.Fly();
 
-            Console.WriteLine("");
-
             //Turkey with Access to Duck Methods
+            Console.WriteLine("\nCreating Wild Turkey - Turkey Methods Point to Duck Behaviors:");
             WildTurkey wildTurkey = new WildTurkey();
             wildTurkey.Display();
-            wildTurkey.Quack();
-            wildTurkey.Fly();
-
+            wildTurkey.Gobble();
+            wildTurkey.Glide();
 
 
             Console.ReadKey();
