@@ -28,7 +28,7 @@ namespace Chapter_9___Iterator_Pattern
             while (iterator.HasNext())
             {
                 MenuItem item = (MenuItem) iterator.Next();
-                Console.WriteLine(item.GetName());
+                Console.WriteLine("     {0} - {1} - V: {2} - ${3}", item.GetName(), item.GetDescription(), item.IsVegeterian(), item.GetPrice());
             }
         }
     }

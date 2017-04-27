@@ -16,6 +16,9 @@ namespace Chapter_9___Iterator_Pattern
         public DinerMenu()
         {
             AddItems("Steak & Chips", "T-Bone Steak with Hand cut Fries", false, 18.99);
+            AddItems("CheeseBurger Meal", "Cheese Burger & Chips Combo", false, 12);
+            AddItems("Lasagna", "Vegeterian Lassagna", true, 7.99);
+            AddItems("Seafood Delight", "Seafood Chowder, with a choice of sides", false, 16);
         }
         public void AddItems(string name, string description, Boolean vegeterian, double price)
         {
@@ -39,7 +42,9 @@ namespace Chapter_9___Iterator_Pattern
         public PancakeMenu()
         {
             menuItems = new MenuItem[MAX_ITEMS];
-            AddItem("Pankcake","Pankcake & Nutella", false, 4.50);
+            AddItem("Pankcake","Pankcake & Nutella", true, 2.75);
+            AddItem("Waffles Haus", "Waffle Plate with a la carte menu", false, 4.50);
+            AddItem("Desert Pancake", "Pankcake with Ice Cream & Fresh Fruits", false, 4.50);
         }
 
         public void AddItem(string name, string description, Boolean vegeterian, double price)
